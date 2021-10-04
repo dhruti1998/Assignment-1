@@ -1,0 +1,30 @@
+/* Write your CSS here */
+.list-items {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 14px;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 10px;
+  width: 285px;
+  height: 150px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+.single-image {
+  width: 50px;
+  margin-right: 12px;
+}
+.teamName {
+  color: white;
+  font-family: 'Bree Serif';
+  font-size: 22px;
+}
+.link-style {
+  text-decoration: none;
+}

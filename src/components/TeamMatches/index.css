@@ -1,0 +1,24 @@
+/* Write your CSS here */
+.part2BG-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 80%;
+}
+.bg-container1 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #a4261d, #0f172a);
+}
+
+.bannerImage {
+  width: 100%;
+}
+.latest-para {
+  font-family: 'Bree Serif';
+  color: white;
+  font-size: 24px;
+}
