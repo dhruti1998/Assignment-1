@@ -1,5 +1,6 @@
 // Write your code here
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import TeamCard from '../TeamCard'
@@ -26,12 +27,14 @@ class Home extends Component {
 
   renderTeams = () => {
     const {listOfTeams} = this.state
-
+    const {id} = listOfTeams
     return (
       <ul className="ul-list">
-        {listOfTeams.map(eachItem => (
-          <TeamCard key={eachItem.id} singleTeamCard={eachItem} />
-        ))}
+        <Link to={`/team-matches/${id}`} className="link-element1">
+          {listOfTeams.map(eachItem => (
+            <TeamCard key={eachItem.id} singleTeamCard={eachItem} />
+          ))}
+        </Link>
       </ul>
     )
   }

@@ -26,10 +26,15 @@
   color: white;
 }
 .ul-list {
-  padding-left: 0px;
+  width: 60%;
+}
+.link-element1 {
+  text-decoration: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 60%;
+
+  padding-left: 0px;
 }

@@ -1,1 +1,16 @@
 /* Write your CSS here */
+.notFound {
+  color: white;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 40px;
+}
+.bg-container1 {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

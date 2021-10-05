@@ -22,3 +22,9 @@
   color: white;
   font-size: 24px;
 }
+.ul-list1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}

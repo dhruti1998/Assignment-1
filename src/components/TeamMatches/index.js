@@ -32,26 +32,41 @@ class TeamMatches extends Component {
       secondInnings: data.latest_match_details.second_innings,
       umpires: data.latest_match_details.umpires,
       venue: data.latest_match_details.venue,
-      recentMatches: data.recent_matches,
-      competingTeamLogo1: data.recent_matches.competing_team_logo,
+      recentMatches: data.recent_matches.map(eachItem => ({
+        competingTeam: eachItem.competing_team,
+        competingTeamLogo: eachItem.competing_team_logo,
+        date: eachItem.date,
+        firstInnings: eachItem.first_innings,
+        manOfTheMatch: eachItem.man_of_the_match,
+        matchStatus: eachItem.match_status,
+        id: eachItem.id,
+        result: eachItem.result,
+      })),
     }
     this.setState({detailList: updatedData, isLoading: false})
   }
 
   renderInfoSection = () => {
     const {detailList} = this.state
-    const {match} = this.props
-    const {params} = match
-    const {id} = params
+    const {recentMatches} = detailList
+
     console.log(detailList)
 
     return (
-      <div className="part2BG-container">
-        <img src={detailList.teamBannerUrl} alt={id} className="bannerImage" />
+      <li className="part2BG-container">
+        <img
+          src={detailList.teamBannerUrl}
+          alt="team banner"
+          className="bannerImage"
+        />
         <p className="latest-para">Latest Matches</p>
         <LatestMatch matchDetails={detailList} />
-        <MatchCard matchDetails={detailList} />
-      </div>
+        <ul className="ul-list1">
+          {recentMatches.map(eachItem => (
+            <MatchCard matchDetails={eachItem} key={eachItem.id} />
+          ))}
+        </ul>
+      </li>
     )
   }
 
